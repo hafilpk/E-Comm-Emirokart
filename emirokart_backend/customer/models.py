@@ -6,7 +6,7 @@ class Customer(AbstractUser):
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=20,blank=True, null=True)
     username = models.CharField(max_length=100, unique=True)
-    password = models.CharField(max_length=50)
+    password = models.CharField(max_length=200)
     address = models.TextField(blank=True, null=True)
     city = models.CharField(max_length=50, blank=True, null=True)
     state = models.CharField(max_length=50, blank=True, null=True)
