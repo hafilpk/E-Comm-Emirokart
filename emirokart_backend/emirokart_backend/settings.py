@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'customer',
+    'product',
+    'order',
 ]
 
 MIDDLEWARE = [
@@ -74,6 +77,9 @@ WSGI_APPLICATION = 'emirokart_backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+
+AUTH_USER_MODEL = 'customer.Customer'
+
 
 DATABASES = {
     'default': {
