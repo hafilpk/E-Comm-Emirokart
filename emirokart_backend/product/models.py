@@ -6,7 +6,6 @@ class Category(models.Model):
     name=models.CharField(max_length=255)
     image=models.ImageField(upload_to='media/category/', blank=True, null=True)
     description=models.TextField()
-    display_order=models.IntegerField(default=0)
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
 
