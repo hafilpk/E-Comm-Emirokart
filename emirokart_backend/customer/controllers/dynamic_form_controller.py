@@ -3,8 +3,12 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.apps import apps
 from emirokart_backend.helpers import get_dynamic_form_models, get_dynamic_form_fields
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.authentication import JWTAuthentication
 
 class DynamicFormController(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
     def get(self, request, modelName, id=None):
         model_map = get_dynamic_form_models()
         if modelName not in model_map:
